@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"consul",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "consul",
+    "description": "api documentation for [consul (v0.28.0)](https://github.com/silas/node-consul#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-consul.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-consul) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-consul.svg)](https://travis-ci.org/npmdoc/node-npmdoc-consul)",
     "devDependencies": {
         "consul": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-consul",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-consul",
+    "keywords": [
+        "documentation",
+        "consul"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_consul.js",
+    "name": "npmdoc-consul",
+    "nameAlias": "npmdoc_consul",
+    "nameOriginal": "npmdoc-consul",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-consul"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
