@@ -1,6 +1,6 @@
 # npmdoc-consul
 
-#### api documentation for  [consul (v0.28.0)](https://github.com/silas/node-consul#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-consul.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-consul) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-consul.svg)](https://travis-ci.org/npmdoc/node-npmdoc-consul)
+#### basic api documentation for  [consul (v0.28.0)](https://github.com/silas/node-consul#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-consul.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-consul) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-consul.svg)](https://travis-ci.org/npmdoc/node-npmdoc-consul)
 
 #### Consul client
 
@@ -74,7 +74,8 @@
         "cover": "istanbul cover _mocha -- --recursive && open coverage/lcov-report/index.html",
         "test": "jshint lib test && jscs lib test && istanbul cover --report text _mocha -- --recursive --check-leaks && istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100"
     },
-    "version": "0.28.0"
+    "version": "0.28.0",
+    "bin": {}
 }
 ```
 
